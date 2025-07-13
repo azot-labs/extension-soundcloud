@@ -1,0 +1,33 @@
+{
+  "name": "soundcloud",
+  "version": "0.0.2",
+  "homepage": "https://soundcloud.com/",
+  "config": {
+    "title": "SoundCloud",
+    "icon": "https://play-lh.googleusercontent.com/JSSeB3XQtb9sHD5FWTqVM4AksY_Kg2q20eExenxGqPJZdn2uVQxi8eoHkP5MA-IR4w=w480-h960-rw"
+  },
+  "keywords": [
+    "Music"
+  ],
+  "author": {
+    "name": "Azot",
+    "url": "https://azot.so/"
+  },
+  "contributors": [
+    {
+      "name": "Vitaly Gashkov",
+      "email": "vitalygashkov@vk.com",
+      "url": "https://github.com/vitalygashkov"
+    }
+  ],
+  "license": "MIT",
+  "main": "soundcloud.js",
+  "files": [
+    "soundcloud.js"
+  ],
+  "scripts": {},
+  "devDependencies": {
+    "@streamyx/api": "^0.2.10",
+    "@types/node": "^24.0.13"
+  }
+}
