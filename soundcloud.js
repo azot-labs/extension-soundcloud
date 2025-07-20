@@ -49,7 +49,7 @@ module.exports = defineExtension({
   fetchContentMetadata: async (url, args) => {
     const patterns = [':author/:song/s-:accessKey', ':author/:song', ':shortLink'];
     const baseUrls = ['https://soundcloud.com', 'https://on.soundcloud.com'];
-    const result = common.execUrlPatterns(url, patterns, baseUrls);
+    const result = Azot.utils.execUrlPatterns(url, patterns, baseUrls);
     const { author, song, accessKey, shortLink } = result.pathname;
 
     const clientId = await findClientID();
