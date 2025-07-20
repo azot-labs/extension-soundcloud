@@ -1,6 +1,6 @@
 'use strict';
 
-const { defineExtension } = require('@streamyx/api');
+const { defineExtension } = require('azot');
 
 async function findClientID() {
   try {
@@ -46,7 +46,6 @@ async function findClientID() {
 }
 
 module.exports = defineExtension({
-  name: 'soundcloud',
   fetchContentMetadata: async (url, args) => {
     const patterns = [':author/:song/s-:accessKey', ':author/:song', ':shortLink'];
     const baseUrls = ['https://soundcloud.com', 'https://on.soundcloud.com'];
@@ -92,7 +91,9 @@ module.exports = defineExtension({
     }
 
     const fileUrlBase = selectedStream.url;
-    const fileUrl = `${fileUrlBase}${fileUrlBase.includes('?') ? '&' : '?'}client_id=${clientId}&track_authorization=${json.track_authorization}`;
+    const fileUrl = `${fileUrlBase}${fileUrlBase.includes('?') ? '&' : '?'}client_id=${clientId}&track_authorization=${
+      json.track_authorization
+    }`;
 
     if (!fileUrl.startsWith('https://api-v2.soundcloud.com/media/soundcloud:tracks:'))
       throw new Error('Empty download');
