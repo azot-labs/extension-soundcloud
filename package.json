@@ -7,7 +7,7 @@
     "icon": "https://play-lh.googleusercontent.com/JSSeB3XQtb9sHD5FWTqVM4AksY_Kg2q20eExenxGqPJZdn2uVQxi8eoHkP5MA-IR4w=w480-h960-rw"
   },
   "keywords": [
-    "Music"
+    "music"
   ],
   "author": {
     "name": "Azot",
@@ -21,11 +21,14 @@
     }
   ],
   "license": "MIT",
-  "main": "soundcloud.js",
+  "main": "dist/soundcloud.js",
   "files": [
-    "soundcloud.js"
+    "dist"
   ],
-  "scripts": {},
+  "scripts": {
+    "dev": "azt dev",
+    "build": "azt build"
+  },
   "devDependencies": {
     "@types/node": "^24.0.15",
     "azot": "^0.9.0"
