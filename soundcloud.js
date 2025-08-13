@@ -1,6 +1,4 @@
-'use strict';
-
-const { defineExtension } = require('azot');
+import { defineExtension } from 'azot';
 
 async function findClientID() {
   try {
@@ -45,8 +43,8 @@ async function findClientID() {
   }
 }
 
-module.exports = defineExtension({
-  fetchContentMetadata: async (url, args) => {
+export default defineExtension({
+  async fetchContentMetadata(url, args) {
     const patterns = [':author/:song/s-:accessKey', ':author/:song', ':shortLink'];
     const baseUrls = ['https://soundcloud.com', 'https://on.soundcloud.com'];
     const result = Azot.utils.execUrlPatterns(url, patterns, baseUrls);
